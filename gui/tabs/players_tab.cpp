@@ -59,9 +59,6 @@ namespace PlayersTab {
 
 				if (selectedPlayer.has_value()) //Upon first startup no player is selected.  Also rare case where the playerdata is deleted before the next gui cycle
 				{
-					ImGui::Text("Is using AUM: %s",
-						selectedPlayer.is_LocalPlayer() || std::count(State.aumUsers.begin(), State.aumUsers.end(), selectedPlayer.get_PlayerData()->fields.PlayerId)
-						? "Yes" : "No");
 				}
 
 
