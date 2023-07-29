@@ -57,11 +57,6 @@ namespace PlayersTab {
 				if (shouldEndListBox)
 					ImGui::ListBoxFooter();
 
-				if (selectedPlayer.has_value()) //Upon first startup no player is selected.  Also rare case where the playerdata is deleted before the next gui cycle
-				{
-				}
-
-
 				if (IsInMultiplayerGame() && IsInGame()) {
 					float taskPercentage = (float) (*Game::pGameData)->fields.CompletedTasks / (float) (*Game::pGameData)->fields.TotalTasks;
 					ImGui::TextColored(ImVec4(1.0f - taskPercentage, 1.0f, 1.0f - taskPercentage, 1.0f), "%.1f%% Total Tasks Completed", taskPercentage * 100);
